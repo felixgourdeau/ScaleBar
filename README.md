@@ -1,5 +1,4 @@
-# react-native-scale-bar  [![NPM version](https://badge.fury.io/js/react-native-scale-bar.svg)](https://badge.fury.io/js/react-native-scale-bar.svg) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](/)
-
+# react-native-scale-bar  [![NPM version](https://badge.fury.io/js/react-native-scale-bar.svg)](https://badge.fury.io/js/react-native-scale-bar.svg) [![Downloads](https://img.shields.io/npm/dt/react-native-scale-bar.svg)](https://www.npmjs.com/package/react-native-scale-bar) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](/)
 
 
 Scale bar for MapView in React Native. Works with Mapbox and Google Map.
