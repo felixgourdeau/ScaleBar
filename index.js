@@ -8,7 +8,9 @@ import { getScaleBarInfoFromZoomLevel } from "./src/ScaleBarModel";
 type Props = {
   zoom: number,
   latitude: number,
-  tile_size: 256 | 512
+  tile_size: 256 | 512,
+  bottom: number,
+  left: number,
 };
 
 class ScaleBar extends Component<Props> {
