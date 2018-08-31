@@ -2,14 +2,16 @@
 
 import R from "ramda";
 
+import { Dimensions } from "react-native";
+
 import {
   TILE_SIZE_METERS_AT_0_ZOOM,
   SCALE_STEPS_IN_METERS,
   SCALE_TEXT_IN_METERS,
   SCALE_SCREEN_RATIO
 } from "./constants";
-//import { SCREEN_WIDTH } from "../../utils/constants";
-import { getDimensions } from "../../utils/constants";
+
+export const getDimensions = () => Dimensions.get("window");
 
 const trim = R.curry((precision: number, number: number): number => +Number(number).toFixed(precision));
 const trimTo7digits = trim(7);
