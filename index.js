@@ -17,7 +17,7 @@ class ScaleBar extends Component<Props> {
   static defaultProps = {
     bottom: 37,
     left: 15,
-    latitude: 48.81879736812265,
+    latitude: 48.8187,
     tile_size: 512
   };
 

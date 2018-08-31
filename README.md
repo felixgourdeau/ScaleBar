@@ -16,7 +16,36 @@ npm install --save react-native-scale-bar
 ## Usage
 
 ```
-<ScaleBar zoom={this.props.zoom_level} latitude={this.state.gpsCoord[1]} tile_size={512} />
+import React, { Component } from "react";
+import Mapbox from "@mapbox/react-native-mapbox-gl";
+import ScaleBar from "react-native-scale-bar";
+import debounce from "lodash.debounce";
+
+(...)
+
+onUserLocationUpdate(location) {
+  const latitude = location.coords.latitude;
+  this.setState({latitude});
+}
+
+async handleMapChange() {
+  const zoom = await this._map.getZoom();
+  this.setState({zoom});
+}
+
+(...)
+
+<Mapbox.MapView
+  ref={c => (this._map = c)}
+  onRegionDidChange={() => this.handleMapChange()}
+  onRegionIsChanging={debounce(() => this.handleMapChange(), 200)}
+  onRegionWillChange={() => this.handleMapChange()}
+  onUserLocationUpdate={this.onUserLocationUpdate}
+  (...)
+/>
+
+<ScaleBar zoom={this.state.zoom} latitude={this.state.latitude}/>
+
 ```
 
 ## Properties
@@ -31,5 +60,5 @@ npm install --save react-native-scale-bar
 
 ## Todo
 
-- Option to place the Scale Bar anywhere on the screen
+- Option to place the scale bar anywhere on the screen
 - Add imperial units
