@@ -1,0 +1,17 @@
+{
+  "name": "react-native-scale-bar",
+  "version": "1.0.0",
+  "description": "Map Scale Bar for Mapbox and Google Map",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "scale",
+    "bar",
+    "map",
+    "mapbox"
+  ],
+  "author": "Felix Gourdeau",
+  "license": "MIT"
+}
