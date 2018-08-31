@@ -22,7 +22,7 @@ npm install --save react-native-scale-bar
 ## Properties
 
 | Prop  | Required  | Type | Default |  Description |
-| :------------ |:---------------:| :---------------:| :-----|
+| :------------ |:---------------:| :---------------:| :---------------:| :-----|
 | zoom | yes | `number` | - | Pass the zoom level to the component to adjust the scale bar.  |
 | latitude | no | `number` | 48.8187 | Use the latitude to adjust the scale bar precision.  |
 | tile_size | no | `number` | 512 | Size of the map tile. Can be either 512 (Mapbox), or 256 (Google Map)  |
