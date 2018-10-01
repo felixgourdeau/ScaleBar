@@ -53,9 +53,8 @@ async handleMapChange() {
 | :------------ |:---------------:| :---------------:| :---------------:| :-----|
 | zoom | yes | `number` | - | Pass the zoom level to the component to adjust the scale bar.  |
 | latitude | no | `number` | 48.8187 | Use the latitude to adjust the scale bar precision.  |
-| tile_size | no | `number` | 512 | Size of the map tile. Can be either 512 (Mapbox), or 256 (Google Map)  |
-| left | no | `number` | 15 | Padding with left border of the screen.  |
-| bottom | no | `number` | 37 | Padding with bottom of the screen.  |
+| left | no | `number` | 10 | Padding with left border of the screen.  |
+| bottom | no | `number` | 32 | Padding with bottom of the screen.  |
 
 ## Todo
 

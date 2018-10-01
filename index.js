@@ -8,23 +8,35 @@ import { getScaleBarInfoFromZoomLevel } from "./src/ScaleBarModel";
 type Props = {
   zoom: number,
   latitude: number,
-  tile_size: 256 | 512,
   bottom: number,
-  left: number,
+  left: number
 };
 
 class ScaleBar extends Component<Props> {
   static defaultProps = {
-    bottom: 37,
-    left: 15,
-    latitude: 48.8187,
-    tile_size: 512
+    latitude: 48.81879736812265,
+    bottom: 42,
+    left: 10
   };
 
   render() {
-    const { scaleBarSize, scaleBarText } = getScaleBarInfoFromZoomLevel(this.props.zoom, this.props.latitude);
+    const {
+      scaleBarSizeInMeters,
+      scaleBarTextInMeters,
+      scaleBarSizeInFeet,
+      scaleBarTextInFeet
+    } = getScaleBarInfoFromZoomLevel(this.props.zoom, this.props.latitude);
 
-    return <ScaleBarView padding_left={this.props.left} padding_bottom={this.props.bottom} length={scaleBarSize} scale_text={scaleBarText} />;
+    return (
+      <ScaleBarView
+        padding_left={this.props.left}
+        padding_bottom={this.props.bottom}
+        lengthMeter={scaleBarSizeInMeters}
+        lengthFeet={scaleBarSizeInFeet}
+        scaleTextMeters={scaleBarTextInMeters}
+        scaleTextFeet={scaleBarTextInFeet}
+      />
+    );
   }
 }
 
